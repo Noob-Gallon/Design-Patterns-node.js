@@ -29,4 +29,4 @@ const CashRegister = {
 // module.exports to export them out as an interface.
 // so, variable 'cash' is private.
 // we can only using the variable cash using the given interface functions.
-module.exports = CashRegister;
+export default CashRegister;
