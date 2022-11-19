@@ -10,6 +10,8 @@ class Scoreboard {
         });
     }
     // let a player leave this game.
+    // player의 name이 name이 전달된 parameter의 이름이면
+    // filter를 통해 board에서 제거한다.
     leave(name) {
         this.board = this.board.filter(player => player.name !== name);
     }
@@ -30,4 +32,5 @@ class Scoreboard {
 }
 
 // to acheive singleton, we have to export as an class instance
+// CommonJS foramt으로 singleton으로 사용할 class의 instance를 export한다.
 module.exports = new Scoreboard();

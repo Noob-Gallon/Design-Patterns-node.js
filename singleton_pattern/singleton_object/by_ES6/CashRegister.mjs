@@ -1,4 +1,6 @@
-let cash = 0; // This is a private variable
+let cash = 0;
+let point = 0;
+// These are private variables.
 
 const CashRegister = {
 
@@ -24,9 +26,24 @@ const CashRegister = {
     }
 }
 
+const PointCalc = {
+    plus(_p) {
+        point += _p;
+    },
+    minus(_p) {
+        if (_p > point) {
+            return;
+        }
+
+        point -= _p;
+    },
+    total() {
+        return point;
+    }
+}
 // commonJS -> ES module로 변환 가능.
 // these 3 methods are public because we are using 
 // module.exports to export them out as an interface.
 // so, variable 'cash' is private.
 // we can only using the variable cash using the given interface functions.
-export default CashRegister;
+export { CashRegister, PointCalc };

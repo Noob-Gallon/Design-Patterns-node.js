@@ -1,4 +1,7 @@
+// Game class의 instance를 만들 수 있음.
 const Game = require('./Game');
+
+// player class의 instance를 만들 수 있음.
 const Player = require('./Player');
 
 const Pete = new Player('Pete');
